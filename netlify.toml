@@ -1,0 +1,46 @@
+[build]
+  command = "hugo --gc --minify -b $URL"
+  publish = "public"
+
+[build.environment]
+  HUGO_VERSION = "0.83.1"
+  HUGO_ENABLEGITINFO = "true"
+
+[context.production.environment]
+  HUGO_ENV = "production"
+
+[context.deploy-preview]
+  command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+
+[context.branch-deploy]
+  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+
+[[plugins]]
+  package = "netlify-plugin-hugo-cache-resources"
+  [plugins.inputs]
+    debug = true
+
+[[redirects]]
+  from = "/blog/advertising/*"
+  to = "/advertising/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/blog/general-data-science"
+  to = "/data-science/*"
+  status = 301
+
+[[redirects]]
+  from = "/blog/general-marketing/*"
+  to = "/marketing/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/blog/marketing-analytics/*"
+  to = "/marketing-analytics/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/blog/marketing-theory/*"
+  to = "/marketing/:splat"
+  status = 301
