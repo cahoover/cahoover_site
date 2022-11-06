@@ -1,0 +1,33 @@
+/* Place your custom SCSS in HUGO_SITE_FOLDER/assets/scss/custom.scss */
+
+.menu li a {
+    color:var(--accent-color-darker)
+}
+
+.widget--toc #TableOfContents {
+    overflow-x: auto;
+   max-height: none;
+
+}
+
+.widget--toc {
+    background-color: transparent !important;
+    box-shadow: none;
+}
+
+.tagCloud-tags {
+    display: inline !important;
+    line-height: 35px;
+}
+
+.section-title {
+    padding: 8px 20px;
+}
+
+.tagCloud-tags a {
+    font-family: 'Lato', sans-serif;
+    color: #1a162dde !important;
+    font-size: 15px !important;
+    background: none !important;
+    box-shadow: none !important;
+}
