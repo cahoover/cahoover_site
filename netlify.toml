@@ -37,7 +37,7 @@
 
 [[redirects]]
   from = "/blog/marketing-analytics/*"
-  to = "/marketing-analytics/:splat"
+  to = "/technical-marketing/:splat"
   status = 301
 
 [[redirects]]
