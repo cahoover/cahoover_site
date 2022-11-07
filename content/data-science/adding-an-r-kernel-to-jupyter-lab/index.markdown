@@ -7,7 +7,7 @@ tags: ['R', 'Jupyter', 'JupyterLab']
 description: Jupyter lab supports R as well as Python; here's how to get started.
 ---
 ## Note
-This guest post was written by the most excellent data scientist Martin Frigaard. Hit him on on twitter @mjfrigaard. 
+This guest post was written by the most excellent data scientist Martin Frigaard. Hit him on on twitter @mjfrigaard.
 
 ## Motivation
 Being bilingual has been shown to increase people’s ability to focus and concentrate, solve problems, and have better mental [flexibility](https://www.bbc.com/future/article/20160811-the-amazing-benefits-of-being-bilingual).
@@ -19,7 +19,7 @@ It’s also important that data scientists limit themselves to relying on a sing
 ## Step 1 - Install Anaconda
 First we need to download and install the Anaconda from [this website](https://www.anaconda.com/distribution/#macos)
 
-![](./anacondamacinstall1.png)
+![](anacondamacinstall1.png)
 
 After downloading and installing Anaconda, open a new macOS Terminal and make sure everything was installed correctly by entering the following commands:
 
@@ -29,7 +29,7 @@ $ Jupyter Lab
 
 This should open your web browser with the following display in your browser. We are using [Brave](https://brave.com/).
 
-![](./2-jupyter-lab-with-r.png)
+![](2-jupyter-lab-with-r.png)
 
 The Anaconda environment has sections for opening a Python Kernel in
 
@@ -79,7 +79,7 @@ We use the pwd command in Terminal to show where the application is, and then us
 
 This is the R session in the Terminal window.
 
-![](./3-run-r-in-terminal.png)
+![](3-run-r-in-terminal.png)
 
 ```
 IRkernel::installspec()
@@ -102,7 +102,7 @@ Shutdown this notebook server (y/[n])? y
 
 Start another JupyterLab session and you should see the option for an R Kernel under the Notebook and Console sections.
 
-![](./anacondamacinstall1.png)
+![](anacondamacinstall1.png)
 
 ## Step 3 - Launch an R Kernel from Jupyter
 Now we want to launch the R Kernel and enter some R code to make sure everything is working. We can test the R Kernel in a Notebook, because Jupyter notebooks give us the ability to insert R code, markdown, or plain text code cells.

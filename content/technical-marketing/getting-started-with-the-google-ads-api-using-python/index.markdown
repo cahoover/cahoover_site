@@ -4,7 +4,7 @@ author: Christopher Hoover
 date: 2021-03-12
 categories: [Marketing Analytics]
 tags: ['Python', 'Google Ads']
-description: | 
+description: |
   How to use the Google Ads API to retrieve campaign data.
 ---
 ## Introduction
@@ -45,13 +45,13 @@ Everyone needs multiple credentials to use the API, and a developer token is the
 
 
 
-![GetToken1](./GetToken1.png)
+![GetToken1](GetToken1.png)
 
 
 
 Fill out the form, accept the terms and conditions, and submit. Make sure you use a real email address that you check regularly. Once your token is granted, it'll appear as a string of numbers and letters in the API Center. It's the part that's fuzzed out in the image below.
 
-![GetToken2](./GetToken2.png)
+![GetToken2](GetToken2.png)
 
 
 
@@ -64,7 +64,7 @@ This will create a test account for you, which is easy to spot because of the re
 
 
 
-![TestAccount1](./TestAccount1.png)
+![TestAccount1](TestAccount1.png)
 
 
 
@@ -74,7 +74,7 @@ The online instructions say to create test accounts "using the Google UI," which
 
 
 
-![TestAccount2](./TestAccount2.png)
+![TestAccount2](TestAccount2.png)
 
 
 
@@ -82,7 +82,7 @@ The online instructions say to create test accounts "using the Google UI," which
 
 
 
-![TestAccount3](./TestAccount3.png)
+![TestAccount3](TestAccount3.png)
 
 
 
@@ -93,7 +93,7 @@ Copy the regular test account number and paste the value somewhere accessible, l
 ## Create a test campaign in your test account
 Enter into your regular test account by clicking The link in the upper left of your Manager account:
 
-![TestCampaign1](./TestCampaign1.png)
+![TestCampaign1](TestCampaign1.png)
 
 
 
@@ -101,7 +101,7 @@ I created three regular accounts, but it doesn't really matter how many you crea
 
 Create a campaign by clicking campaigns in the left sidebar and then the + link.
 
-![TestCampaign2](./TestCampaign2.png)
+![TestCampaign2](TestCampaign2.png)
 
 
 
@@ -119,7 +119,7 @@ To start, sign into [Google Cloud](https://console.cloud.google.com/) with the s
 ### Create a Google Cloud project
 In the upper left, select the project you want to use with the Google Ads API. If you don't have a project, click New Project.
 
-![Cloud1](./Cloud1.png)
+![Cloud1](Cloud1.png)
 
 
 
@@ -129,19 +129,19 @@ If you are prompted for billing information at any time (and it's likely you wil
 
 Make sure your project is selected, and click APIs and Services at the left
 
-![Cloud2](./Cloud2.png)
+![Cloud2](Cloud2.png)
 
 
 
 Click the + API and Services link at the top of the page that opens
 
-![Cloud2a](./Cloud2a.png)
+![Cloud2a](Cloud2a.png)
 
 
 
 Search for Google Ads. Select it when it appears and click the ENABLE button.  When you're asked for the application type, you'll probably want to select Installed App (select Web App if you are building a platform that people will use to access their account, which is very unlikely if you're just getting started).
 
-![Cloud3](./Cloud3.png)
+![Cloud3](Cloud3.png)
 
 
 
@@ -149,19 +149,19 @@ Search for Google Ads. Select it when it appears and click the ENABLE button.  W
 
 Click the API and Services again, this time selecting credentials.
 
-![Cloud4](./Cloud4.png)
+![Cloud4](Cloud4.png)
 
 
 
 On the Credentials screen, click CREATE CREDENTIALS, then select OAuth client ID.
 
-![Cloud5](/courses/example/GoogleAds.assets/Cloud5.png)
+![Cloud5](Cloud5.png)
 
 
 
 For the type, select "Other"
 
-![Cloud6](./Cloud6.png)
+![Cloud6](Cloud6.png)
 
 
 
@@ -169,13 +169,13 @@ Two credentials will be created, a client ID and a secret. Copy these values and
 
 Note that once you close this modal, only the Client ID will appear on the main credentials page. To access the secret again, click on the name of your OAUTH credentials:
 
-![Cloud7](./Cloud7.png)
+![Cloud7](Cloud7.png)
 
 
 
 And you'll be able to get to your secret:
 
-![](./Cloud8.png)
+![](Cloud8.png)
 
 
 
@@ -183,7 +183,7 @@ And you'll be able to get to your secret:
 
 On the credentials page, to the far right of your OAUTH credentials, you'll see a download icon. Click this to download your credentials as a JSON.
 
-![Cloud9](./Cloud9.png)
+![Cloud9](Cloud9.png)
 
 
 
@@ -234,7 +234,7 @@ There should be three files in this folder. The one we want is authenticate_in_s
 
 This snippet will return a URL, looking something like this:
 
-![OAuth](./OAuth.png)
+![OAuth](OAuth.png)
 
 
 
@@ -242,13 +242,13 @@ This snippet will return a URL, looking something like this:
 
 Click allow
 
-![OAuth1](./OAuth1.png)
+![OAuth1](OAuth1.png)
 
 
 
 An authorization code will be shown to you.
 
-![](./OAuth2.png)
+![](OAuth2.png)
 
 
 
@@ -281,7 +281,7 @@ By default, the Google Ads API looks for all your credentials in a yaml file in 
 
 Here's what the file looks like. When you've moved the file to the home directory, edit it and add the appropriate information, and save it.
 
-![](./OAuth3.png)
+![](OAuth3.png)
 
 
 

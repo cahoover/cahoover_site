@@ -30,7 +30,7 @@ Using booleans in data is usually a two-step process: the first step is to evalu
 
 Consider the following simple dataframe, which samples four people associated with the number of times the person has seen Star Wars:
 
-![Simple dataframe](./boolean1.png)
+![Simple dataframe](boolean1.png)
 
 Let's establish a boolean to evaluate which people have see the film fewer than 10 times?
 
@@ -39,14 +39,14 @@ evaluation = df['number'] < 10
 ```
 What this does is evaluate every entry in the column 'number', compare it with the boolean, and place the result in the series "evaluation." Now we have evaluation, a series that evaluates the truthiness of the boolean
 
-![deprived person evaluation](./boolean2.png)
+![deprived person evaluation](boolean2.png)
 
 The second step is to use this true/false evaluation as a filter, creating a new series populated by values that are true.
 
 ```
 deprived_persons = df['evaluation']
 ```
-![deprived person filter](./boolean3.png)
+![deprived person filter](boolean3.png)
 
 Now we have a new series called deprived_persons that contains two rows. If we like, we can filter just one column:
 

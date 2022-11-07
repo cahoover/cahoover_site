@@ -4,13 +4,13 @@ author: Christopher Hoover
 date: 2021-03-12
 categories: [Data Science]
 tags: ['Jupyter', 'Python']
-description: | 
+description: |
   How to install Jupyter notebook, which lets you run snippets of code with added notes and instructions.
 ---
 ## Why bother
 Jupyter notebook lets you enter and run snippets of code with added notes and instructions. Take a look at the following screenshot (ignore the actual code right now):
 
-![Jupyter](./jupyter1.png)
+![Jupyter](jupyter1.png)
 
 The notebook has **two alternating sections**:
 
@@ -23,14 +23,14 @@ When you run the code sections, Jupyter notebook displays the output of the code
 ## Installing Jupyter Notebook
 If you installed Python using Anaconda, Jupyter is installed automatically. You can launch it by starting Anaconda Navigator and clicking the launch button under Jupyter.
 
-![](./jupyter2.png)
+![](jupyter2.png)
 
 Remember to choose the virtual environment you wish to work in before running Jupyter notebook by selecting from the dropdown at the top (see screenshot below). Selecting an environment means that you are using Jupyter notebook in that environment.
 
 Not sure what a virtual environment is? You should learn about them – read more here.
 
 
-![](./jupyter3.png)
+![](jupyter3.png)
 
 You can also launch Jupyter Notebook from the terminal by typing:
 

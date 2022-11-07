@@ -3,36 +3,36 @@ title: Getting started with the Twitter API using Python
 author: Christopher Hoover
 date: 2021-03-12
 tags: ['Python', 'Twitter']
-description: | 
+description: |
   The Twitter API lets you automatically retrieve tweets that contain a particular hashtag.
 ---
 
 To get started with the Twitter API, you first need to sign up for a developer account at [developer.twitter.com](https://developer.twitter.com/en/apply/user.html)
 
-![](./twitter_apply1.png)
+![](twitter_apply1.png)
 
 You'll need to complete your Twitter profile if it's not already done (many people need to enter a telephone number - be sure and enter one that can receive an SMS verification code, you'll need it to continue with the application).
 
 ## Select a primary reason for using the API
 Here you'll tell Twitter your high level use of the API.
 
-![](./twitter_apply_step2.png)
+![](twitter_apply_step2.png)
 
 ## Confirm your identity
 Make sure you're in the right account.
 
-![](./twitter_applystep3.png)
+![](twitter_applystep3.png)
 
 ## Describe your use of the API
 Twitter will ask you to describe the use of the API. There's no reason not to be as transparent and complete as you can. For example, I'm going to practice using the various Python APIs, so that's what I said.
 
-![](./twitter_applystep4.png)
+![](twitter_applystep4.png)
 
 ## Agree to the rules
 
 Read the developer agreement, click the "agree" box and submit your application. Normally you'll get your developer account approved in a day or two. If Twitter has any follow up questions they'll be in touch.
 
-![](./twitter_applystep5.png)
+![](twitter_applystep5.png)
 
 ## Create an app
 
@@ -40,19 +40,19 @@ Twitter requires two sets of authentication tokens. One is your developer token,
 
 Once you have your developer account approved, log into [developer.twitter.com](https://developer.twitter.com) and click on your username in the upper right. Select "Apps"
 
-![](./twitter_create1.png)
+![](twitter_create1.png)
 
 On the apps page, click "create an app"
 
-![](./twitter_create2.png)
+![](twitter_create2.png)
 
 You'll be asked to fill out a brief form
 
-![](./twitter_apply2.png)
+![](twitter_apply2.png)
 
 Once you create your app, you can access both your developer tokens and the app tokens by going to the apps page and clicking on an app.
 
- ![](./twitter_apply3.png)
+ ![](twitter_apply3.png)
 
 ## Get the tokens ready for use
 

@@ -18,15 +18,15 @@ We'll assume you're using RStudio for this experiment. Create a new project by c
 
 Select new project
 
-![](./1.png)
+![](1.png)
 
 And again
 
-![](./2.png)
+![](2.png)
 
 Name your project. It's a good idea to click the "renv" box here, because it'll create an environment just for this project. In this way when you install packages, they won't conflict with other packages. You should also create a git repo so you can track changes.
 
-![](./3.png)
+![](3.png)
 
 ## Install the required packages
 

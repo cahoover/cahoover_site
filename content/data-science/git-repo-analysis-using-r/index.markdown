@@ -4,7 +4,7 @@ author: Christopher Hoover
 date: 2021-06-02
 categories: [Data Science]
 tags: ['Git', 'R']
-description: | 
+description: |
   Explore a Git repo with R.
 ---
 ## Introduction
@@ -25,7 +25,7 @@ library(stringr)
 
 The first thing we want to do is clone a Git repo onto our local device. This gives us complete control over the repo without needing to worry about impacting anyone. We'll evaluate the ggplot2 repository, just for fun.
 
-First, define where the repo is located. 
+First, define where the repo is located.
 
 ```{r}
 # Remote repository URL
@@ -77,9 +77,9 @@ That's better.
 Time to explore a little. First we can look at the history of commits.
 
 ```{r}
-history_logs <- system(log_cmd, intern = TRUE) %>% 
-  str_split_fixed(option_delim, length(log_format_options)) %>% 
-  as_tibble() %>% 
+history_logs <- system(log_cmd, intern = TRUE) %>%
+  str_split_fixed(option_delim, length(log_format_options)) %>%
+  as_tibble() %>%
   setNames(names(log_format_options))
 
 history_logs
@@ -87,23 +87,23 @@ history_logs
 
 A tibble will be produced containing the commit history, looking something like this:
 
-![Commit History](./commits.png)
+![Commit History](commits.png)
 
 Let's take a look at who is doing most of the work in this repo.
 
 ```{r}
-history_logs %>% 
+history_logs %>%
   count(author, sort = TRUE)
 ```
 
-![Author History](./authors.png)
+![Author History](authors.png)
 
 ## Tidy author names
 
 It's common in Git repos for the same author to use different names. This usually happens when people log in from different computers. In this case you see that there are three variations of Hadley Wickham, including "hadley," "hadley wickham" (lower case), and "Hadley Wickham" (upper case). Let's clean these up.
 
 ```{r}
-history_logs <- history_logs %>% 
+history_logs <- history_logs %>%
   mutate(author = case_when(
     str_detect(tolower(author), "hadley") ~ "Hadley Wickham",
     str_detect(tolower(author), "kohske takahashi") ~ "Kohske Takahashi",
@@ -116,10 +116,10 @@ history_logs <- history_logs %>%
 And now we can visualize the authors using ggplot
 
 ```{r}
-history_logs %>% 
-  count(author) %>% 
-  top_n(10, n) %>% 
-  mutate(author = fct_reorder(author, n)) %>% 
+history_logs %>%
+  count(author) %>%
+  top_n(10, n) %>%
+  mutate(author = fct_reorder(author, n)) %>%
   ggplot(aes(author, n)) +
     geom_col(aes(fill = n), show.legend = FALSE) +
     coord_flip() +
@@ -127,7 +127,7 @@ history_logs %>%
     ggtitle("ggplot2 authors with most commits") +
     labs(x = NULL, y = "Number of commits")
 ```
-![Author Graph](./ggplotAuthor.png)
+![Author Graph](ggplotAuthor.png)
 
 ## Visualize directories
 
@@ -179,7 +179,7 @@ devtools::install_github("jeromefroe/circlepackeR")
 Then load the library
 
 ```{r}
-library(circlepackeR)         
+library(circlepackeR)
 ```
 Create the visualization
 
@@ -196,8 +196,8 @@ saveWidget(circles, file=paste0( getwd(), "/HtmlWidget/circular_packing_circlepa
 
 The file will appear in RStudio under the "files" section.
 
-![Interactive Circles](./circleviz.png)
+![Interactive Circles](circleviz.png)
 
 And there you have it!
 
-![Interactive Circles](./circleviz_2.png)
+![Interactive Circles](circleviz_2.png)

@@ -112,4 +112,4 @@ driver.quit()
 
 That's it! A very simple program. You'll now have a csv that contains all the reviews you retreived, looking something like this:
 
-![Tripadvisor reviews](./TripAdvisor_reviews.png)
+![Tripadvisor reviews](TripAdvisor_reviews.png)

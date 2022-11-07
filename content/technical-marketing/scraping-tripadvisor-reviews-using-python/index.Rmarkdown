@@ -3,12 +3,12 @@ title: Scraping Tripadvisor reviews using Python
 author: Christopher Hoover
 date: 2021-03-19
 tags: [‘Scraping’, ‘Python’]
-description: | 
+description: |
   Use Python to scrape Tripadvisor reviews for evaluation.
 ---
 
 ## Introduction
-We’re going to use scrape review data from Tripadvisor, which would be helpful if you wanted to do a NLP analysis of reviews as a way to keep your finger on the pulse of customer satisfaction. 
+We’re going to use scrape review data from Tripadvisor, which would be helpful if you wanted to do a NLP analysis of reviews as a way to keep your finger on the pulse of customer satisfaction.
 
 Selenium is a tool that lets you control your desktop browser programmatically. Tripadvisor requires a "read more" button to be clicked to reveal the entire review, and Selenium is a good tool to easily get this done.
 
@@ -31,7 +31,7 @@ import time #This package lets us pause execution for a bit
 ```
 ## Define variables
 
-We'll need to set up some variables. 
+We'll need to set up some variables.
 
 First, define a path and file to store data. Here I'm just putting it on my Mac's desktop
 ```
@@ -74,7 +74,7 @@ Now it's time to tell Selenium to grab the reviews. Because Tripadvisor reviews 
 for i in range(0, pages_to_scrape):
 
     # give the DOM time to load
-    time.sleep(2) 
+    time.sleep(2)
 
     # Click the "expand review" link to reveal the entire review.
     driver.find_element_by_xpath(".//div[contains(@data-test-target, 'expand-review')]").click()
@@ -84,7 +84,7 @@ for i in range(0, pages_to_scrape):
 
     # Next we'll grab the date of the review:
     dates = driver.find_elements_by_xpath(".//div[@class='_2fxQ4TOx']")
-    
+
    # Now we'll look at the reviews in the container and parse them out
 
     for j in range(len(container)): # A loop defined by the number of reviews
@@ -97,11 +97,11 @@ for i in range(0, pages_to_scrape):
         review = container[j].find_element_by_xpath(".//q[@class='IRsGHoPm']").text.replace("\n", "  ")
         #Grab the data
         date = " ".join(dates[j].text.split(" ")[-2:])
-        
+
         #Save that data in the csv and then continue to process the next review
-        csvWriter.writerow([date, rating, title, review]) 
-        
-    # When all the reviews in the container have been processed, change the page and repeat            
+        csvWriter.writerow([date, rating, title, review])
+
+    # When all the reviews in the container have been processed, change the page and repeat
     driver.find_element_by_xpath('.//a[@class="ui_button nav next primary "]').click()
 
 # When all pages have been processed, quit the driver
@@ -111,4 +111,4 @@ driver.quit()
 
 That's it! A very simple program. You'll now have a csv that contains all the reviews you retreived, looking something like this:
 
-![Tripadvisor reviews](./TripAdvisor_reviews.png)
+![Tripadvisor reviews](TripAdvisor_reviews.png)
