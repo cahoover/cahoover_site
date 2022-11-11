@@ -2,7 +2,7 @@
 title: Getting started with the Google Ads API using Python
 author: Christopher Hoover
 date: 2021-03-12
-categories: [Marketing Analytics]
+categories: [Technical Marketing]
 tags: ['Python', 'Google Ads']
 description: |
   How to use the Google Ads API to retrieve campaign data.

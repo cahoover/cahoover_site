@@ -2,7 +2,7 @@
 title: Getting started with Google Tag Manager
 author: Christopher Hoover
 date: 2021-03-12
-categories: [Marketing Analytics]
+categories: [Technical Marketing]
 tags: ['Tag Manager']
 description: |
   How to use Google Tag Manager to place snippets of code on a website.

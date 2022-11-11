@@ -2,7 +2,7 @@
 title: Scraping Tripadvisor reviews using R
 author: Christopher Hoover
 date: 2021-03-22
-categories: [Marketing Analytics]
+categories: [Technical Marketing]
 tags: ['Scraping', 'R']
 description: |
   Using R to scrape Tripadvisor reviews for evaluation.

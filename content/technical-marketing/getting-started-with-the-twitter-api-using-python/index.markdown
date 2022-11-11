@@ -2,7 +2,7 @@
 title: Getting started with the Twitter API using Python
 author: Christopher Hoover
 date: 2021-03-12
-categories: [Marketing Analytics]
+categories: [Technical Marketing]
 tags: ['Python', 'Twitter']
 description: |
   The Twitter API lets you automatically retrieve tweets that contain a particular hashtag.

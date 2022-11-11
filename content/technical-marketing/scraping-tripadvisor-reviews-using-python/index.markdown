@@ -2,7 +2,7 @@
 title: Scraping Tripadvisor reviews using Python
 author: Christopher Hoover
 date: 2021-03-19
-categories: [Marketing Analytics]
+categories: [Technical Marketing]
 tags: ['Scraping', 'Python']
 description: |
   Use Python to scrape Tripadvisor reviews for evaluation.
